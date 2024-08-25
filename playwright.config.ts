@@ -2,13 +2,14 @@
 
 import { defineConfig, devices } from '@playwright/test'
 import type { APIRequestOptions } from './utils/fixtures'
+import { config } from 'dotenv'
+import * as path from 'path'
 
 /**
  * Read environment variables from file.
  * https://github.com/motdotla/dotenv
  */
-// import dotenv from 'dotenv';
-// dotenv.config({ path: path.resolve(__dirname, '.env') })
+config({ path: path.resolve(__dirname, '.env') })
 
 /**
  * See https://playwright.dev/docs/test-configuration.
